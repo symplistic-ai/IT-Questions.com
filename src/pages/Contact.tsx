@@ -58,8 +58,8 @@ export function Contact() {
         </ol>
         <p>
           Starting from a guide? Link it in the ticket, for example{' '}
-          <Link to="/guide/printer-not-printing#printer-not-working">printer offline</Link> or{' '}
-          <Link to="/guide/phishing-and-malware#clicked-suspicious-link">clicked a suspicious link</Link>.
+          <Link to="/guide/printers#printer-not-working">printer offline</Link> or{' '}
+          <Link to="/guide/security#clicked-suspicious-link">clicked a suspicious link</Link>.
         </p>
       </section>
     </div>

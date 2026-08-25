@@ -2,8 +2,7 @@ import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { DifficultyBadge } from '../components/ArticleCard'
 import { articleBySlug } from '../data/articles'
-import { categoryById } from '../data/categories'
-import { articleHref, topicArticles, topicById, topicsInCategory } from '../data/topics'
+import { articleHref, legacyTopicRedirects, topicArticles, topicById } from '../data/topics'
 import { usePageTitle } from '../lib/pageTitle'
 import type { Article } from '../types'
 
@@ -84,9 +83,14 @@ function ArticleSection({ article }: { article: Article }) {
 export function ArticlePage() {
   const { slug } = useParams()
   const topic = slug ? topicById[slug] : undefined
+  const legacyTopicId = slug ? legacyTopicRedirects[slug] : undefined
   const legacyArticle = slug ? articleBySlug[slug] : undefined
 
   usePageTitle(topic ? `${topic.name} · IT-Questions.com` : 'IT-Questions.com', topic?.blurb)
+
+  if (!topic && legacyTopicId) {
+    return <Navigate to={`/guide/${legacyTopicId}`} replace />
+  }
 
   if (!topic && legacyArticle) {
     return <Navigate to={articleHref(legacyArticle.slug)} replace />
@@ -96,24 +100,20 @@ export function ArticlePage() {
     return <Navigate to="/browse" replace />
   }
 
-  const category = categoryById[topic.category]
   const items = topicArticles(topic)
-  const siblings = topicsInCategory(topic.category).filter((item) => item.id !== topic.id)
 
   return (
     <article className="page-article page-topic">
       <nav className="crumbs">
         <Link to="/">Home</Link>
         <span>/</span>
-        <Link to={`/category/${category.id}`}>{category.name}</Link>
+        <Link to="/browse">Guides</Link>
         <span>/</span>
         <span>{topic.name}</span>
       </nav>
 
       <header className="article-hero">
-        <p className="kicker">
-          {category.name} · {items.length} guides
-        </p>
+        <p className="kicker">{items.length} guides</p>
         <h1>{topic.name}</h1>
         <p className="lede">{topic.blurb}</p>
       </header>
@@ -134,18 +134,6 @@ export function ArticlePage() {
               </li>
             ))}
           </ul>
-          {siblings.length > 0 && (
-            <>
-              <h2>Also in {category.name}</h2>
-              <ul>
-                {siblings.map((item) => (
-                  <li key={item.id}>
-                    <Link to={`/guide/${item.id}`}>{item.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
         </aside>
       </div>
     </article>

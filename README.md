@@ -32,4 +32,4 @@ Live site: https://it-questions.com/
 
 Repo: https://github.com/symplistic-ai/IT-Questions.com
 
-`npm run build` writes 20 topic HTML pages that contain all 100 guides (for example `dist/guide/passwords-and-lockouts/index.html`). Search still runs in the browser. Local `npm run dev` stays a live React app.
+`npm run build` writes 10 topic HTML pages that contain all 100 guides (for example `dist/guide/accounts/index.html`). Search still runs in the browser. Local `npm run dev` stays a live React app.

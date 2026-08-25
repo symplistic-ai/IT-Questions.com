@@ -7,7 +7,7 @@ import { usePageTitle } from '../lib/pageTitle'
 import type { CategoryId } from '../types'
 
 export function Browse() {
-  usePageTitle('All guides · IT-Questions.com', 'Browse 100 IT self-service guides grouped on 20 topic pages.')
+  usePageTitle('All guides · IT-Questions.com', 'Browse 100 IT self-service guides grouped on 10 topic pages.')
   const [category, setCategory] = useState<CategoryId | 'all'>('all')
   const [query, setQuery] = useState('')
 

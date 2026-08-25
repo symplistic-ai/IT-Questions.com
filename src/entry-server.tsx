@@ -26,7 +26,6 @@ export function getPrerenderRoutes() {
     '/browse',
     '/contact',
     '/search',
-    ...categories.map((category) => `/category/${category.id}`),
     ...topics.map((topic) => `/guide/${topic.id}`),
   ]
 }

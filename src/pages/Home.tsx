@@ -16,7 +16,7 @@ export function Home() {
   return (
     <div className="page-home">
       <section className="hero">
-        <p className="kicker">Employee self-service · 100 guides on 20 pages</p>
+        <p className="kicker">Employee self-service · 100 guides on 10 pages</p>
         <h1>
           Fix the usual IT problems
           <em> without waiting on a ticket.</em>

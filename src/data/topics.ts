@@ -11,9 +11,9 @@ export type Topic = {
 
 export const topics: Topic[] = [
   {
-    id: 'connect-to-the-network',
-    name: 'Connect to the network',
-    blurb: 'VPN, office Wi-Fi, guest access, Ethernet, and how to find your IP address.',
+    id: 'network',
+    name: 'Network & VPN',
+    blurb: 'Get online, stay on the VPN, reach internal systems, and fix slow or dropped connections.',
     category: 'network',
     slugs: [
       'connect-to-vpn',
@@ -22,14 +22,6 @@ export const topics: Topic[] = [
       'use-ethernet-instead-of-wifi',
       'find-my-ip-address',
       'split-tunneling',
-    ],
-  },
-  {
-    id: 'fix-network-problems',
-    name: 'Fix network problems',
-    blurb: 'VPN drops, Wi-Fi with no internet, missing shared drives, and slow connections.',
-    category: 'network',
-    slugs: [
       'vpn-connected-no-internal-access',
       'vpn-keeps-disconnecting',
       'wifi-connected-no-internet',
@@ -39,9 +31,9 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'send-and-set-up-email',
-    name: 'Send and set up email',
-    blurb: 'New Outlook profiles, stuck Outbox items, signatures, shared mailboxes, and out-of-office.',
+    id: 'email',
+    name: 'Email & Calendar',
+    blurb: 'Outlook setup, mail flow, signatures, shared mailboxes, calendar invites, and a slow inbox.',
     category: 'email',
     slugs: [
       'setup-outlook-new-computer',
@@ -50,14 +42,6 @@ export const topics: Topic[] = [
       'create-email-signature',
       'add-shared-mailbox',
       'out-of-office-reply',
-    ],
-  },
-  {
-    id: 'inbox-and-calendar',
-    name: 'Inbox and calendar',
-    blurb: 'Missing mail, deleted messages, calendar invites, phishing, and a slow Outlook.',
-    category: 'email',
-    slugs: [
       'emails-not-receiving',
       'recover-deleted-email',
       'calendar-invites-not-showing',
@@ -67,9 +51,9 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'passwords-and-lockouts',
-    name: 'Passwords and lockouts',
-    blurb: 'Reset, expire, change, and unlock a work account after a password problem.',
+    id: 'accounts',
+    name: 'Passwords & Accounts',
+    blurb: 'Reset, expire, unlock, MFA, Windows Hello, and shared-account requests.',
     category: 'accounts',
     slugs: [
       'reset-my-password',
@@ -77,14 +61,6 @@ export const topics: Topic[] = [
       'password-expired',
       'change-password-before-expiry',
       'cannot-sign-in-after-password-change',
-    ],
-  },
-  {
-    id: 'mfa-and-sign-in',
-    name: 'MFA and sign-in',
-    blurb: 'Authenticator apps, new phones, PINs, lock screens, and shared-account requests.',
-    category: 'accounts',
-    slugs: [
       'mfa-authenticator-not-working',
       'setup-mfa-new-phone',
       'forgot-windows-hello-pin',
@@ -93,23 +69,15 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'printer-not-printing',
-    name: 'Printer not printing',
-    blurb: 'Offline printers, adding a queue, stuck jobs, and prints that go to the wrong floor.',
+    id: 'printers',
+    name: 'Printers & Scanners',
+    blurb: 'Offline printers, stuck jobs, jams, poor quality, and scanning to email or OneDrive.',
     category: 'printers',
     slugs: [
       'printer-not-working',
       'add-network-printer',
       'print-job-stuck-in-queue',
       'prints-to-wrong-printer',
-    ],
-  },
-  {
-    id: 'print-quality-and-scanning',
-    name: 'Print quality and scanning',
-    blurb: 'Blank pages, jams, streaks, and scanning to email or OneDrive.',
-    category: 'printers',
-    slugs: [
       'printer-blank-pages',
       'printer-paper-jam',
       'poor-print-quality',
@@ -117,9 +85,9 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'recover-and-sync-files',
-    name: 'Recover and sync files',
-    blurb: 'Deleted files, missing OneDrive documents, version history, and sync errors.',
+    id: 'files',
+    name: 'Files & Storage',
+    blurb: 'Recover files, sync OneDrive, share large documents, and map network drives.',
     category: 'files',
     slugs: [
       'recover-deleted-files',
@@ -127,14 +95,6 @@ export const topics: Topic[] = [
       'restore-previous-file-version',
       'onedrive-not-syncing',
       'files-online-only',
-    ],
-  },
-  {
-    id: 'share-and-access-files',
-    name: 'Share and access files',
-    blurb: 'Low disk space, home access, locked files, large shares, and mapped drives.',
-    category: 'files',
-    slugs: [
       'disk-full-low-storage',
       'access-files-from-home',
       'cannot-open-file-permissions',
@@ -143,9 +103,9 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'keyboards-mice-and-audio',
-    name: 'Keyboards, mice, and audio',
-    blurb: 'Dead keys, stuck keys, trackpads, headsets, webcams, and unrecognized USB devices.',
+    id: 'hardware',
+    name: 'Hardware',
+    blurb: 'Keyboards, monitors, docks, batteries, audio, and peripherals that will not connect.',
     category: 'hardware',
     slugs: [
       'keyboard-not-working',
@@ -154,14 +114,6 @@ export const topics: Topic[] = [
       'headphones-not-detected',
       'webcam-not-working',
       'usb-device-not-recognized',
-    ],
-  },
-  {
-    id: 'screens-docks-and-power',
-    name: 'Screens, docks, and power',
-    blurb: 'External monitors, flicker, docks, overheating, batteries, and a laptop that will not start.',
-    category: 'hardware',
-    slugs: [
       'external-monitor-not-detected',
       'monitor-flickering-or-no-signal',
       'laptop-wont-turn-on',
@@ -171,9 +123,9 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'install-and-update-apps',
-    name: 'Install and update apps',
-    blurb: 'Approved software, updates, defaults, launch failures, and stuck Windows Update.',
+    id: 'software',
+    name: 'Software & Apps',
+    blurb: 'Installs, crashes, updates, default programs, browsers, and stuck Windows Update.',
     category: 'software',
     slugs: [
       'application-wont-launch',
@@ -182,14 +134,6 @@ export const topics: Topic[] = [
       'request-unlisted-software',
       'set-default-browser-or-app',
       'windows-update-stuck',
-    ],
-  },
-  {
-    id: 'crashes-and-browser-issues',
-    name: 'Crashes and browser issues',
-    blurb: 'Office crashes, slow browsers, cache, PDFs, old plugins, and unexpected restarts.',
-    category: 'software',
-    slugs: [
       'excel-or-word-crashing',
       'browser-slow-or-crashing',
       'clear-cache-and-cookies',
@@ -199,23 +143,15 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'phishing-and-malware',
-    name: 'Phishing and malware',
-    blurb: 'Suspicious links, possible viruses, locking the PC, and reporting a lost device.',
+    id: 'security',
+    name: 'Security',
+    blurb: 'Phishing, malware, lost devices, blocked USB sticks, and safe sharing of work data.',
     category: 'security',
     slugs: [
       'possible-virus-or-malware',
       'clicked-suspicious-link',
       'lock-my-computer',
       'report-lost-or-stolen-device',
-    ],
-  },
-  {
-    id: 'protect-work-data',
-    name: 'Protect work data',
-    blurb: 'Blocked USB sticks, firewall denials, encrypting a file, and password requests.',
-    category: 'security',
-    slugs: [
       'usb-drive-blocked',
       'website-blocked-by-firewall',
       'encrypt-a-sensitive-file',
@@ -223,23 +159,15 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'phones-and-mfa-codes',
-    name: 'Phones and MFA codes',
-    blurb: 'Work email on a phone, BYOD, missing MFA texts, and wiping a lost phone.',
+    id: 'mobile',
+    name: 'Mobile & Remote',
+    blurb: 'Phones, MFA texts, home VPN, dual monitors, and working away from the desk.',
     category: 'mobile',
     slugs: [
       'setup-email-on-phone',
       'byod-personal-phone',
       'phone-not-receiving-mfa-codes',
       'wipe-lost-phone',
-    ],
-  },
-  {
-    id: 'remote-work-setup',
-    name: 'Remote work setup',
-    blurb: 'Home VPN, remote access requests, dual monitors, and chat on a phone.',
-    category: 'mobile',
-    slugs: [
       'cannot-connect-vpn-from-home',
       'request-remote-access',
       'dual-monitor-setup-at-home',
@@ -247,23 +175,15 @@ export const topics: Topic[] = [
     ],
   },
   {
-    id: 'join-meetings',
-    name: 'Join meetings',
-    blurb: 'Camera, mic, lobby issues, echo, and missing chat notifications.',
+    id: 'meetings',
+    name: 'Meetings & Chat',
+    blurb: 'Camera, mic, screen share, recording, and collaboration tools.',
     category: 'meetings',
     slugs: [
       'camera-or-mic-not-working-in-meetings',
       'cannot-join-a-meeting',
       'echo-or-feedback-in-meeting',
       'chat-notifications-not-working',
-    ],
-  },
-  {
-    id: 'present-and-collaborate',
-    name: 'Present and collaborate',
-    blurb: 'Screen share, the wrong display, recording, and creating a Teams or SharePoint space.',
-    category: 'meetings',
-    slugs: [
       'share-my-screen',
       'screen-share-wrong-screen',
       'record-a-meeting',
@@ -272,12 +192,36 @@ export const topics: Topic[] = [
   },
 ]
 
+/** Old two-page-per-category URLs still resolve to the merged page. */
+export const legacyTopicRedirects: Record<string, string> = {
+  'connect-to-the-network': 'network',
+  'fix-network-problems': 'network',
+  'send-and-set-up-email': 'email',
+  'inbox-and-calendar': 'email',
+  'passwords-and-lockouts': 'accounts',
+  'mfa-and-sign-in': 'accounts',
+  'printer-not-printing': 'printers',
+  'print-quality-and-scanning': 'printers',
+  'recover-and-sync-files': 'files',
+  'share-and-access-files': 'files',
+  'keyboards-mice-and-audio': 'hardware',
+  'screens-docks-and-power': 'hardware',
+  'install-and-update-apps': 'software',
+  'crashes-and-browser-issues': 'software',
+  'phishing-and-malware': 'security',
+  'protect-work-data': 'security',
+  'phones-and-mfa-codes': 'mobile',
+  'remote-work-setup': 'mobile',
+  'join-meetings': 'meetings',
+  'present-and-collaborate': 'meetings',
+}
+
 const assigned = topics.flatMap((topic) => topic.slugs)
 const missing = articles.filter((article) => !assigned.includes(article.slug)).map((article) => article.slug)
 const extra = assigned.filter((slug) => !articles.some((article) => article.slug === slug))
 const dupes = assigned.filter((slug, index) => assigned.indexOf(slug) !== index)
 
-if (missing.length || extra.length || dupes.length || topics.length !== 20) {
+if (missing.length || extra.length || dupes.length || topics.length !== 10) {
   throw new Error(
     `Topic map is invalid: ${topics.length} topics, missing ${missing.join(', ') || 'none'}, extra ${extra.join(', ') || 'none'}, dupes ${dupes.join(', ') || 'none'}`,
   )

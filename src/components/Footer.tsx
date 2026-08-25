@@ -17,7 +17,7 @@ export function Footer() {
         <div>
           <h2>Topics</h2>
           <ul>
-            {topics.slice(0, 10).map((topic) => (
+            {topics.slice(0, 5).map((topic) => (
               <li key={topic.id}>
                 <Link to={`/guide/${topic.id}`}>{topic.name}</Link>
               </li>
@@ -27,7 +27,7 @@ export function Footer() {
         <div>
           <h2>More</h2>
           <ul>
-            {topics.slice(10).map((topic) => (
+            {topics.slice(5).map((topic) => (
               <li key={topic.id}>
                 <Link to={`/guide/${topic.id}`}>{topic.name}</Link>
               </li>
@@ -41,7 +41,7 @@ export function Footer() {
               <Link to="/contact">Contact IT</Link>
             </li>
             <li>
-              <Link to="/browse">Browse all 20 pages</Link>
+              <Link to="/browse">Browse all 10 pages</Link>
             </li>
             <li>
               <a href="tel:+15550100">Service desk · ext. 4357</a>
